@@ -1,4 +1,4 @@
-#student.pu
+#student.py
 
 import json
 import statistics
@@ -67,14 +67,28 @@ def delete_student():
                 messagebox.showerror("Error", "Student not found")
                 #6. update_table
                 # StackOverflow Treeview example
-                # 6. update_table
-                # 6. update_table
                 def update_table():
                     for row in tree.get_children():
                         tree.delete(row)
                         for name, data in students.items():
                             tree.insert("","end", values=(name, str(data["marks"]), data["average"]))
-             
+
+  #7. sort_students
+  # Python sorted() documentation
+def sort_students():
+    sorted_data = sorted(students.items(), key=lambda x: x[1]["average"], reverse=True)
+    for row in tree.get_children():
+        tree.delete(row)
+    for name, data in sorted_data:
+        tree.insert("","end", values=(name, str(data["marks"]), data["average"]))
+  
+    
+
+
+
+
               
+                
+
 
                
