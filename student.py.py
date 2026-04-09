@@ -1,10 +1,13 @@
+#student.pu
 
+import json
 import statistics
 import tkinter as tk
 from tkinter import messagebox,simpledialog
 from tkinter import ttk
 
 student = {} # Dictionary to store student data
+
 
 #0. Load_data
 #Python JSON module documentation
