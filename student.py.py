@@ -81,6 +81,20 @@ def sort_students():
         tree.delete(row)
     for name, data in sorted_data:
         tree.insert("","end", values=(name, str(data["marks"]), data["average"]))
+
+        #8. load_and_refresh
+        #Concept: Refresh GUI table after loading JSON data
+        #Python JSON documentation + Treeview handling
+def load_and_refresh():
+    try:
+        load_data()
+        update_table()
+        messagebox.showinfo("Success", "Data loaded sucessfully!")
+    except:
+        messagebox.showerror("Error", "Failed to load data")
+      
+
+   
   
     
 
