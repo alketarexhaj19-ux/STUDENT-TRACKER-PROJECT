@@ -65,4 +65,16 @@ def delete_student():
                 messagebox.showinfo("Result", f"{name}\nMarks: {data['marks']}\nAverage: {data['average']}")
             else:
                 messagebox.showerror("Error", "Student not found")
+                #6. update_table
+                # StackOverflow Treeview example
+                # 6. update_table
+                # 6. update_table
+                def update_table():
+                    for row in tree.get_children():
+                        tree.delete(row)
+                        for name, data in students.items():
+                            tree.insert("","end", values=(name, str(data["marks"]), data["average"]))
+             
+              
+
                
