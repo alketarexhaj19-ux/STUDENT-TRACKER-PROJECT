@@ -46,5 +46,14 @@ def load_data():
                     update_table()
                 except:
                     messagebox.showerror("Error", "Invalid input")
-            
+ # 4. delete_student
+# : GeeksforGeeks Python dictionary tutorial
 
+def delete_student():
+    name = simpledialog.askstring("Input", "Enter student name to delete:")
+    if name in students:
+        del students[name]
+        update_table()
+    else:
+        messagebox.showerror("Error", "Student not found")
+               
