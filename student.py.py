@@ -56,4 +56,13 @@ def delete_student():
         update_table()
     else:
         messagebox.showerror("Error", "Student not found")
+        #5. search_student
+        # StackOverflow Tkinter simpledialog example
+        def search_student():
+            name = simpledialog.askstring("Search", "Enter student name;")
+            if name in students:
+                data = students[name]
+                messagebox.showinfo("Result", f"{name}\nMarks: {data['marks']}\nAverage: {data['average']}")
+            else:
+                messagebox.showerror("Error", "Student not found")
                
